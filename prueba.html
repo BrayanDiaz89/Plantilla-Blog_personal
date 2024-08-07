@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformación de Botón en Grid</title>
+  <style>
+    :root {
+      --color-primario: #3498db;
+      --color-secundario: #f1c40f;
+      --color-terciario: #2ecc71;
+      --color-cuarto: #ffffff;
+    }
+
+    .blogs-main {
+      display: grid;
+    }
+
+    .news {
+      background-color: var(--color-secundario);
+      padding: 10px 80px 40px;
+    }
+
+    .news-contents {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 2fr;
+    }
+
+    .news-contents img {
+      grid-column: 1;
+      width: 85%;
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .news-info {
+      grid-column: 2;
+    }
+
+    .news-info h2 {
+      margin-top: 20px;
+    }
+
+    .news-info p {
+      margin: 30px 0;
+      text-align: justify;
+    }
+
+    .blogs-btn {
+      text-decoration: none;
+      color: var(--color-terciario);
+      border: 1px solid var(--color-primario);
+      padding: 10px 15px;
+      font-size: 0.875rem;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border 0.3s ease, opacity 0.3s ease;
+      display: inline-block;
+    }
+
+    .blogs-btn:hover {
+      background-color: var(--color-primario);
+      color: var(--color-cuarto);
+      border: 1px solid var(--color-cuarto);
+      opacity: 0.8;
+      transform: translateX(32px);
+      /* Prefijos no necesarios en la mayoría de los navegadores modernos */
+    }
+  </style>
+</head>
+<body>
+  <div class="blogs-main">
+    <div class="news">
+      <div class="news-contents">
+        <img src="example.jpg" alt="Example Image">
+        <div class="news-info">
+          <h2>Título de la Noticia</h2>
+          <p>Contenido de la noticia...</p>
+          <a class="blogs-btn" href="blog.html">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
