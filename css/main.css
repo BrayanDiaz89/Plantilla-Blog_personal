@@ -334,7 +334,8 @@ NAV*/
   }
 
   .project{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;;
     padding: 15px;
     max-width: 28%;
     margin-bottom: 50px;
@@ -364,8 +365,62 @@ NAV*/
     .section-contact{
       padding: 10px;
     }
+    .contact-info{
+      margin-left:20px;
+    }
    
   }
+
+  @media (max-width:1000px){
+ 
+    /* PAGE BLOG*/
+     .main-blog__content img{
+       margin:10px 0 0 40px;
+       padding: 0 10px 0 100px;
+     }
+     .contact-info{
+       width: 200px;
+     }
+     .contact img{
+       width:100px;
+     }
+     
+   }
+   
+
+@media (max-width:900px){
+  /*PAGE CONTACTO*/
+  .main-profile{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  .profile-img img{
+    width: 100%;
+  }
+  .profile-info{
+    margin:20px 0;
+    padding:0 10px;
+    width: auto;
+  }
+  .profile-info h2{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+    /*PAGE CONTACTO*/
+
+    .projects-container{
+      display: flex;
+      flex-wrap:nowrap;
+      flex-direction: column;
+    }
+    .project{
+      max-width: 100%;
+      margin-bottom: 10px;
+      padding: 15px 15px 5px;
+    }
+
+}
 
 @media (max-width:800px){
   /*HEADER UNIVERSAL*/
@@ -406,27 +461,13 @@ NAV*/
   .section-contact{
   padding: 10px;
   }
+
+
  footer{
     font-size: 0.9rem;
     border-top: 20px solid var(--color-primario);
  }
 }
-
-@media (max-width:1000px){
- 
- /* PAGE BLOG*/
-  .main-blog__content img{
-    margin:10px 0 0 40px;
-    padding: 0 10px 0 100px;
-  }
-  .contact-info{
-    width: 200px;
-  }
-  .contact img{
-    width:100px;
-  }
-}
-
 
 @media (max-width:750px){
   /*PAGE BLOG*/
@@ -448,13 +489,19 @@ NAV*/
   .contact-info{
     width: 400px;
   }
+  
+  /*PAGE CONTACTO*/
+  .main-projects__container{
+    padding:0 30px 10px;
+  }
 
   footer{
     font-size: 0.7rem;
     border-top: 20px solid var(--color-primario);
  }
 }
-@media (max-width:400px){
+
+@media (max-width:450px){
   .section-contact{
     padding: 10px;
     display: flex;
@@ -463,6 +510,13 @@ NAV*/
   }
   .contact-info{
     width: auto;
+  }
+  .contact{
+    align-items: center;
+  }
+  .contact img{
+    width: 80px;
+    height: 80px;
   }
 }
 
